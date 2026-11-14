@@ -5,7 +5,7 @@ miniatura:
   linea1: "WHATSAPP"
   linea2: "QUE VENDE SOLO"
   etiqueta: "GRATIS"
-  chat: ["¿Precio del corte? (23:47)", "$250. ¿Te agendo mañana 10:00?"]
+  icono: "💬"
 descripcion: |
   Tu negocio pierde clientes cada vez que un mensaje de WhatsApp se queda sin respuesta.
   En este video te muestro cómo un asistente de IA responde, da precios y agenda citas por ti.
@@ -23,9 +23,21 @@ escenas:
     titulo: "Tu WhatsApp pierde clientes"
     subtitulo: "Y se arregla en una tarde"
     narracion: >
-      ¿Tu negocio pierde clientes porque nadie contesta el WhatsApp a las once de la noche?
-      Hoy vas a poner un asistente de inteligencia artificial que responde, da precios y agenda citas por ti.
-      Sin programar, y gratis.
+      Son las once de la noche. Tu negocio está cerrado, y un cliente nuevo te escribe por WhatsApp.
+      Mira lo que pasa en los próximos diez segundos.
+  - tipo: chat
+    titulo: "Así responde tu asistente"
+    contacto: "Cliente nuevo"
+    mensajes:
+      - "Hola, ¿cuánto cuesta el corte?"
+      - "¡Hola! El corte cuesta $250 y dura 40 minutos."
+      - "¿Tienen lugar mañana?"
+      - "Sí: 10:00 o 16:30. ¿Cuál te agendo?"
+    narracion: >
+      Mira cómo se ve. Un cliente pregunta cuánto cuesta el corte.
+      El asistente responde al instante con el precio y la duración.
+      El cliente pregunta si hay lugar mañana, y el asistente le ofrece dos horarios para agendar.
+      Todo esto mientras tú duermes. Y hoy te enseño a montarlo, gratis y sin programar.
   - tipo: dato
     cifra: "23:00"
     texto: "Tu cliente escribe. Nadie responde."
@@ -43,6 +55,7 @@ escenas:
       Al final de este video vas a tener tres cosas.
       Respuesta inmediata a cualquier hora. Precios y horarios que se envían solos.
       Y citas que se agendan sin que tú toques el teléfono.
+      Pero hay un paso que casi todos se saltan, y es la razón por la que su asistente responde tonterías.
   - tipo: paso
     numero: 1
     titulo: "Escribe la ficha de tu negocio"
@@ -51,7 +64,7 @@ escenas:
       - "Horario y ubicación"
       - "Las 10 preguntas que más te hacen"
     narracion: >
-      Paso uno. Antes de tocar cualquier herramienta, escribe la ficha de tu negocio.
+      Ese paso es este. Antes de tocar cualquier herramienta, escribe la ficha de tu negocio.
       Tus servicios con precio, tu horario, tu ubicación, y las diez preguntas que más te hacen.
       La inteligencia artificial solo es tan buena como la información que le das.
   - tipo: cierre

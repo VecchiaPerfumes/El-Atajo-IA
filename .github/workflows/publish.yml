@@ -22,7 +22,7 @@ jobs:
       - name: Renderizar y subir
         run: |
           for f in $(git diff --name-only HEAD~1 HEAD -- episodes/ | grep yaml$); do
-            python -m gen.render "$f"
+            python -m gen.motion "$f"
             id=$(basename "$f" .yaml)
             if [ -n "$YT_REFRESH_TOKEN" ]; then python -m gen.upload "$id"; fi
           done

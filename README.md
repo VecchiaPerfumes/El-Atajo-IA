@@ -6,10 +6,16 @@ Convierte un guion (`episodes/epXXX.yaml`) en un video largo 1920x1080 con voz y
 | --- | --- |
 | Guiones | Claude, en el proyecto (escribe el YAML cada semana) |
 | Voz | edge-tts (voces neuronales de Microsoft Edge) |
-| Diapositivas y miniatura | Pillow + fuente Inter (licencia OFL) |
+| Animación y miniatura | Pillow + NumPy, fuentes Inter y Noto Color Emoji (licencia OFL) |
 | Montaje y subtítulos | FFmpeg |
 | Servidor | GitHub Actions (gratis en repositorios públicos; 2.000 min/mes en privados) |
 | Subida | YouTube Data API, o subida manual desde YouTube Studio |
+
+## Motor de motion graphics (`gen/motion.py`)
+
+Es el motor que usan los flujos. Anima cada escena sincronizada con la voz: título palabra por palabra, puntos que aparecen cuando la voz los dice, subtítulos tipo karaoke, chat de WhatsApp que se escribe solo, íconos animados, barra de progreso, transición de barrido y efectos de sonido generados por código. Si pones un .mp3 en `assets/musica/` (por ejemplo, de la Biblioteca de audio de YouTube), se usa como música de fondo baja. `gen/render.py` queda como versión estática simple.
+
+Tipos de escena: `portada`, `dato`, `lista`, `paso`, `chat`, `cierre`. Campo opcional `icono` con un emoji.
 
 ## Cómo funciona
 
@@ -22,7 +28,7 @@ Convierte un guion (`episodes/epXXX.yaml`) en un video largo 1920x1080 con voz y
 
 ```bash
 pip install -r requirements.txt     # y tener ffmpeg instalado
-python -m gen.render episodes/ep001.yaml
+python -m gen.motion episodes/ep001.yaml
 # resultado en salida/ep001/
 ```
 
