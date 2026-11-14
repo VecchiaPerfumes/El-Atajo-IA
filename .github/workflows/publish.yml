@@ -1,0 +1,37 @@
+# Al aprobar (merge a main) se renderiza y se sube programado a YouTube.
+# Solo se activa cuando existen los secretos YT_*; si no, deja el video como artifact.
+name: Publicar episodio
+on:
+  push:
+    branches: [main]
+    paths: ["episodes/**"]
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+      YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+      YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 2 }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: pip install -r requirements.txt
+      - name: Renderizar y subir
+        run: |
+          for f in $(git diff --name-only HEAD~1 HEAD -- episodes/ | grep yaml$); do
+            python -m gen.motion "$f"
+            id=$(basename "$f" .yaml)
+            if [ -n "$YT_REFRESH_TOKEN" ]; then python -m gen.upload "$id"; fi
+          done
+      - uses: actions/upload-artifact@v4
+        with:
+          name: publicado
+          path: |
+            salida/*/*.mp4
+            salida/*/*.jpg
+            salida/*/*.json
+            salida/muestras/*.mp3
+          retention-days: 30

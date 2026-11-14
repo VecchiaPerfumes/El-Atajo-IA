@@ -1,0 +1,75 @@
+# Episodio 1 del calendario. Cada escena = una diapositiva + su narración.
+id: ep001
+titulo: "Pon un asistente de IA en el WhatsApp de tu negocio (gratis y sin programar)"
+miniatura:
+  linea1: "WHATSAPP"
+  linea2: "QUE VENDE SOLO"
+  etiqueta: "GRATIS"
+  icono: "💬"
+descripcion: |
+  Tu negocio pierde clientes cada vez que un mensaje de WhatsApp se queda sin respuesta.
+  En este video te muestro cómo un asistente de IA responde, da precios y agenda citas por ti.
+
+  00:00 El problema
+  00:30 Qué vas a lograr
+  01:00 Paso 1: la información de tu negocio
+  01:45 Paso 2: el asistente
+  02:30 Paso 3: respuestas rápidas y horario
+  03:15 Errores que te cuestan clientes
+etiquetas: [whatsapp business, inteligencia artificial, ia para negocios, automatizacion, emprendedores, chatbot whatsapp]
+publicar: "2026-11-24T18:00:00-06:00"   # hora de México; null = sin programar
+escenas:
+  - tipo: portada
+    titulo: "Tu WhatsApp pierde clientes"
+    subtitulo: "Y se arregla en una tarde"
+    narracion: >
+      Son las once de la noche. Tu negocio está cerrado, y un cliente nuevo te escribe por WhatsApp.
+      Mira lo que pasa en los próximos diez segundos.
+  - tipo: chat
+    titulo: "Así responde tu asistente"
+    contacto: "Cliente nuevo"
+    mensajes:
+      - "Hola, ¿cuánto cuesta el corte?"
+      - "¡Hola! El corte cuesta $250 y dura 40 minutos."
+      - "¿Tienen lugar mañana?"
+      - "Sí: 10:00 o 16:30. ¿Cuál te agendo?"
+    narracion: >
+      Mira cómo se ve. Un cliente pregunta cuánto cuesta el corte.
+      El asistente responde al instante con el precio y la duración.
+      El cliente pregunta si hay lugar mañana, y el asistente le ofrece dos horarios para agendar.
+      Todo esto mientras tú duermes. Y hoy te enseño a montarlo, gratis y sin programar.
+  - tipo: dato
+    cifra: "23:00"
+    texto: "Tu cliente escribe. Nadie responde."
+    nota: "Revisa cuántos chats te llegan fuera de horario"
+    narracion: >
+      Piensa en tus propios chats. ¿Cuántos mensajes te llegan cuando ya cerraste?
+      Cada uno es alguien que quería comprarte y que, si no le respondes rápido, le escribe a tu competencia.
+  - tipo: lista
+    titulo: "Lo que vas a tener al final"
+    puntos:
+      - "Respuesta inmediata 24/7"
+      - "Precios y horarios sin escribirlos"
+      - "Citas agendadas solas"
+    narracion: >
+      Al final de este video vas a tener tres cosas.
+      Respuesta inmediata a cualquier hora. Precios y horarios que se envían solos.
+      Y citas que se agendan sin que tú toques el teléfono.
+      Pero hay un paso que casi todos se saltan, y es la razón por la que su asistente responde tonterías.
+  - tipo: paso
+    numero: 1
+    titulo: "Escribe la ficha de tu negocio"
+    puntos:
+      - "Servicios y precios"
+      - "Horario y ubicación"
+      - "Las 10 preguntas que más te hacen"
+    narracion: >
+      Ese paso es este. Antes de tocar cualquier herramienta, escribe la ficha de tu negocio.
+      Tus servicios con precio, tu horario, tu ubicación, y las diez preguntas que más te hacen.
+      La inteligencia artificial solo es tan buena como la información que le das.
+  - tipo: cierre
+    titulo: "Descarga la plantilla gratis"
+    subtitulo: "Enlace en la descripción"
+    narracion: >
+      Te dejo la plantilla de la ficha en la descripción, gratis.
+      Si te sirvió, suscríbete: cada semana automatizamos una parte de tu negocio.
