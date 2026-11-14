@@ -4,41 +4,59 @@ miniatura:
   linea1: "30 POSTS"
   linea2: "EN 1 HORA CON IA"
   etiqueta: "PLANTILLA"
-  chat: ["Escribe 30 posts para mi panadería", "Listo: calendario de noviembre"]
+  icono: "📅"
 descripcion: |
-  Cómo planear un mes completo de contenido para el Instagram de tu negocio en una hora,
-  usando IA gratis, sin que suene genérico. Incluye la plantilla de instrucciones (prompt).
+  Cómo planear y programar un mes completo de contenido para el Instagram de tu negocio en una hora,
+  usando IA gratis, sin que suene genérico. Incluye la ficha de voz y el prompt.
 
-  00:00 El problema del contenido
+  00:00 Un mes de contenido en una hora
   00:40 Por qué la IA escribe posts genéricos
   01:40 Paso 1: la ficha de voz de tu marca
   03:00 Paso 2: los 4 pilares de contenido
   04:20 Paso 3: el prompt de 30 publicaciones
   05:40 Paso 4: imágenes en Canva por lotes
-  06:40 Errores que delatan que lo hizo una IA
+  06:40 Paso 5: programar todo el mes gratis
+  07:30 Errores que delatan que lo hizo una IA
 etiquetas: [instagram para negocios, contenido con ia, chatgpt instagram, canva, marketing digital, emprendedores, calendario de contenido]
 publicar: "2026-11-26T18:00:00-06:00"
 escenas:
   - tipo: portada
     titulo: "Un mes de Instagram en una hora"
     subtitulo: "Con IA gratis y sin sonar a robot"
+    icono: "📅"
     narracion: >
-      Publicar todos los días en Instagram te roba horas que deberías usar en vender.
-      Hoy te enseño a dejar listo un mes completo de publicaciones en una sola hora, con inteligencia artificial gratis.
-      Y lo más importante: sin que tus clientes noten que lo escribió una máquina.
+      Esto es un mes completo de publicaciones para una panadería: treinta posts, con texto, imagen y fecha.
+      Lo hice en una hora, con inteligencia artificial gratis.
+      Y si lo lees, no parece escrito por una máquina. Te enseño exactamente cómo.
+  - tipo: chat
+    titulo: "Lo que vas a conseguir"
+    contacto: "Asistente de IA"
+    icono: "🤖"
+    mensajes:
+      - "Escribe 30 publicaciones para mi panadería con mi ficha de voz"
+      - "Día 1, pilar Enseñar: ¿Por qué tu pan se pone duro al día siguiente? Tres trucos…"
+      - "Dame 3 ganchos distintos para el día 1"
+      - "1) Tu pan no está viejo, lo guardas mal. 2) El error del refrigerador. 3) Pan suave hasta el jueves."
+    narracion: >
+      Así se ve el proceso. Le das tu ficha de voz, le pides treinta publicaciones, y te devuelve el calendario completo.
+      Después le pides tres ganchos distintos para cada post, y tú eliges el mejor.
+      Fíjate en el tono: habla como hablaría el dueño de la panadería, no como un folleto.
+      Eso no sale solo. Sale de lo que le das antes, y ahí es donde casi todo el mundo falla.
   - tipo: dato
     cifra: "El error"
     texto: "Pedirle a la IA: escribe un post para mi negocio"
     nota: "Una instrucción vaga produce un texto genérico"
+    icono: "🚫"
     narracion: >
       Casi todo el mundo usa la inteligencia artificial igual: abre el chat y escribe, haz un post para mi negocio.
       Y le sale un texto lleno de frases vacías, emojis por todas partes y cero personalidad.
       El problema no es la herramienta. Es que no le diste nada con qué trabajar.
       La inteligencia artificial no conoce a tus clientes, ni tus precios, ni cómo hablas tú.
-      Así que en los próximos minutos le vamos a dar exactamente eso.
+      Así que vamos a darle exactamente eso, en cinco pasos.
   - tipo: paso
     numero: 1
     titulo: "Escribe la ficha de voz de tu marca"
+    icono: "🗣️"
     puntos:
       - "A quién le vendes y qué le preocupa"
       - "Cómo hablas: tú o usted, serio o cercano"
@@ -48,9 +66,22 @@ escenas:
       Primero, a quién le vendes y qué le preocupa. No pongas todo el mundo. Pon, por ejemplo, mamás que trabajan y no tienen tiempo de cocinar.
       Segundo, cómo hablas. ¿Tuteas o hablas de usted? ¿Eres serio o bromista?
       Tercero, las palabras que siempre usas y las que nunca usarías.
-      Copia tres publicaciones tuyas que te gusten y pégalas al final. Ese es el mejor ejemplo que le puedes dar.
   - tipo: lista
-    titulo: "Los 4 pilares de contenido"
+    titulo: "El truco que cambia todo"
+    icono: "💡"
+    puntos:
+      - "Pega 3 publicaciones tuyas reales"
+      - "Pega 3 comentarios de clientes"
+      - "Pide que imite el tono, no el texto"
+    narracion: >
+      Y ahora el truco que de verdad cambia el resultado.
+      Al final de la ficha, pega tres publicaciones tuyas que te hayan funcionado.
+      Luego pega tres comentarios reales de clientes, con sus palabras exactas.
+      Así la inteligencia artificial aprende cómo hablas tú y cómo hablan tus clientes.
+      Y pídele que imite el tono, no que copie el texto.
+  - tipo: lista
+    titulo: "Paso 2: los 4 pilares de contenido"
+    icono: "🏛️"
     puntos:
       - "Enseñar: un consejo útil"
       - "Mostrar: detrás de escena"
@@ -63,10 +94,18 @@ escenas:
       Mostrar: cómo trabajas por dentro, el proceso, el equipo.
       Demostrar: opiniones de clientes y resultados reales.
       Y vender: una oferta clara, con precio y con una sola acción, por ejemplo, escríbenos por WhatsApp.
-      Una buena mezcla para empezar es una venta por cada tres publicaciones de valor.
+  - tipo: dato
+    cifra: "3 a 1"
+    texto: "Tres publicaciones de valor por cada venta"
+    nota: "Punto de partida: ajústalo según lo que te funcione"
+    icono: "⚖️"
+    narracion: >
+      ¿Cuántas de cada una? Un buen punto de partida es tres publicaciones de valor por cada publicación de venta.
+      No es una ley. Es un comienzo. Después de un mes, mira cuáles te trajeron mensajes y ajusta.
   - tipo: paso
     numero: 3
     titulo: "El prompt de 30 publicaciones"
+    icono: "✍️"
     puntos:
       - "Pega tu ficha de voz y tus pilares"
       - "Pide una tabla: día, pilar, gancho, texto"
@@ -74,11 +113,25 @@ escenas:
     narracion: >
       Paso tres: el prompt. Abre Claude o ChatGPT, los dos tienen versión gratis.
       Pega tu ficha de voz, los cuatro pilares, y pide treinta publicaciones en una tabla con estas columnas: día, pilar, gancho, texto e idea de imagen.
-      Aquí va el truco: pide tres ganchos distintos para cada publicación. La primera línea es la que hace que alguien se detenga, así que elígela tú.
-      Te dejo el prompt completo en la descripción para que solo lo copies.
+      Pide también las fechas importantes del mes, como el Buen Fin o la quincena, para que el calendario tenga sentido.
+      Y aquí va la clave: pide tres ganchos distintos para cada publicación. La primera línea es la que hace que alguien se detenga, así que elígela tú.
+  - tipo: lista
+    titulo: "Cómo elegir el mejor gancho"
+    icono: "🪝"
+    puntos:
+      - "Habla de un problema concreto"
+      - "Tiene un número o una sorpresa"
+      - "Se entiende en 2 segundos"
+    narracion: >
+      ¿Cómo eliges entre tres ganchos? Usa estas tres pruebas.
+      Uno: habla de un problema concreto de tu cliente, no de tu negocio.
+      Dos: tiene un número o algo inesperado.
+      Tres: se entiende en dos segundos, mientras alguien desliza el dedo.
+      Si un gancho pasa las tres pruebas, ese es.
   - tipo: paso
     numero: 4
     titulo: "Diseña las imágenes por lotes en Canva"
+    icono: "🎨"
     puntos:
       - "Una plantilla con tus colores"
       - "Crear en lote desde una hoja de cálculo"
@@ -88,8 +141,21 @@ escenas:
       Luego copia la columna de ganchos de tu tabla y usa la función de crear en lote.
       Canva rellena la plantilla con cada frase y te genera todos los diseños de una vez.
       Revisa que la función esté disponible en tu plan, porque Canva cambia sus opciones con frecuencia.
+  - tipo: paso
+    numero: 5
+    titulo: "Programa todo el mes de una vez"
+    icono: "⏰"
+    puntos:
+      - "Meta Business Suite es gratis"
+      - "Instagram y Facebook a la vez"
+      - "Elige tus mejores horarios"
+    narracion: >
+      Paso cinco: programar. Meta Business Suite es la herramienta gratuita de Meta para Instagram y Facebook.
+      Sube cada imagen con su texto y su fecha, y deja el mes entero programado.
+      Para los horarios, revisa en las estadísticas de tu cuenta a qué hora está conectada tu audiencia.
   - tipo: lista
     titulo: "Errores que delatan a la IA"
+    icono: "🕵️"
     puntos:
       - "Frases como: en el mundo actual"
       - "Emojis en cada línea"
@@ -103,7 +169,8 @@ escenas:
   - tipo: cierre
     titulo: "Copia el prompt gratis"
     subtitulo: "Enlace en la descripción"
+    icono: "🎁"
     narracion: >
       El prompt completo y la ficha de voz están en la descripción, gratis.
-      En el próximo video conectamos esto con tus cobros, para que los recordatorios de pago se envíen solos.
+      Pero publicar no sirve de nada si después no cobras. En el próximo video hacemos que los recordatorios de pago se envíen solos.
       Suscríbete para no perdértelo.

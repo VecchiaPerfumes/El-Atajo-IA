@@ -4,7 +4,7 @@ miniatura:
   linea1: "COBRA"
   linea2: "SIN PERSEGUIR CLIENTES"
   etiqueta: "GRATIS"
-  chat: ["Recordatorio: tu pago vence mañana", "¡Gracias! Ya transferí"]
+  icono: "💸"
 descripcion: |
   Cómo dejar de perseguir clientes para que te paguen: una hoja de Google Sheets que envía
   recordatorios de pago automáticos por correo, con textos escritos por IA. Gratis y sin programar.
@@ -23,9 +23,22 @@ escenas:
     titulo: "Deja de perseguir a tus clientes"
     subtitulo: "Recordatorios de pago automáticos y gratis"
     narracion: >
-      Si tienes que escribirle a tus clientes para recordarles que te deben, este video es para ti.
-      Hoy vas a crear un sistema que envía los recordatorios de pago por ti, a tiempo y con buen tono.
-      Gratis, en Google Sheets, y sin saber programar.
+      Este correo lo recibió un cliente esta mañana, a las nueve en punto. Nadie lo escribió. Nadie apretó enviar.
+      Y diez minutos después, el cliente pagó.
+      Hoy te enseño a montar este sistema de cobro automático, gratis, en Google Sheets y sin saber programar.
+  - tipo: chat
+    titulo: "Así cobra tu negocio solo"
+    contacto: "Cliente: Laura M."
+    icono: "📩"
+    mensajes:
+      - "Hola Laura, te recuerdo que el pago de $1,200 por el diseño de tu logo vence el viernes."
+      - "¡Gracias por avisar! Ya lo tenía olvidado."
+      - "Puedes pagar por transferencia a la cuenta de siempre. ¡Gracias!"
+      - "Listo, ya transferí."
+    narracion: >
+      Así funciona. Tres días antes del vencimiento, tu cliente recibe un recordatorio amable, con el monto, el concepto y la fecha.
+      Si el día que vence todavía no pagó, recibe otro con la forma de pago.
+      Y tú no escribiste nada. Solo marcaste pagado cuando llegó el dinero.
   - tipo: dato
     cifra: "Tu tiempo"
     texto: "Cada mensaje de cobro manual es tiempo que no vendes"
@@ -46,6 +59,7 @@ escenas:
       Otro el mismo día.
       Y uno amable tres días después, si todavía no aparece el pago.
       Cuando marcas un cobro como pagado, los avisos se detienen solos.
+      Pero ojo: el texto de esos avisos es lo que decide si te pagan rápido o si pierdes al cliente. Y ahí la inteligencia artificial te ahorra mucho.
   - tipo: paso
     numero: 1
     titulo: "Crea la hoja de cobros"
@@ -91,6 +105,19 @@ escenas:
       Paso cuatro, y no te lo saltes: prueba.
       Agrega un cobro falso con tu propio correo y una fecha de mañana. Ejecuta el script y revisa que el mensaje te llegue con el nombre y el monto correctos.
       Un error en una automatización no se equivoca una vez. Se equivoca con todos tus clientes a la vez.
+  - tipo: lista
+    titulo: "Qué hace el script por dentro"
+    icono: "⚙️"
+    puntos:
+      - "Lee cada fila pendiente"
+      - "Calcula días para el vencimiento"
+      - "Envía el aviso que toca y lo anota"
+    narracion: >
+      Si te da curiosidad qué hace el script por dentro, es muy simple.
+      Lee cada fila que dice pendiente.
+      Calcula cuántos días faltan para el vencimiento, o cuántos pasaron.
+      Si toca un aviso, envía el mensaje correspondiente y anota la fecha en la columna último aviso, para no repetirlo.
+      Son unas cuarenta líneas, y no tienes que entenderlas para usarlas.
   - tipo: lista
     titulo: "Reglas para no molestar"
     puntos:

@@ -227,6 +227,8 @@ class Escena:
         self.s = W / 1920 if not vertical else W / 1080
         self.margen = (130 if not vertical else 80)
         self.ancho_txt = (W * 0.58) if not vertical else (W - 160)
+        if esc["tipo"] == "chat" and not vertical:
+            self.ancho_txt = W * 0.42
         self.preparar()
 
     # ---- preparación
@@ -410,7 +412,7 @@ class Escena:
         d.ellipse([28, 18, 82, 72], fill=ACENTO)
         d.text((100, 24), self.e.get("contacto", "Cliente"), font=fuente("Inter-Bold.otf", 36), fill=TEXTO)
         visibles = [(b, pr, ini) for b, pr, ini in self.burbujas if t >= ini]
-        y = h - 30
+        y = h - 80
         for b, propio, ini in reversed(visibles):
             y -= b.height + 18
             if y < 100:
