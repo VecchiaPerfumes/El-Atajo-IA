@@ -8,7 +8,7 @@ subidos por API quedan en privado. Hasta entonces, sube a mano desde YouTube Stu
 import json
 import os
 import sys
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from google.oauth2.credentials import Credentials
@@ -29,8 +29,10 @@ def cliente():
 def subir(yt, archivo, titulo, descripcion, etiquetas, publicar):
     estado = {"privacyStatus": "private", "selfDeclaredMadeForKids": False,
               "containsSyntheticMedia": False}
-    if publicar:
+    if publicar and datetime.fromisoformat(publicar) > datetime.now(timezone.utc):
         estado["publishAt"] = publicar
+    else:
+        estado["privacyStatus"] = "public"  # fecha ya pasada o sin fecha: publica al momento
     cuerpo = {"snippet": {"title": titulo[:100], "description": descripcion,
                           "tags": etiquetas, "categoryId": "27", "defaultLanguage": "es",
                           "defaultAudioLanguage": "es"},
