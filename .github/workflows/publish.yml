@@ -1,10 +1,16 @@
 # Al aprobar (merge a main) se renderiza y se sube programado a YouTube.
-# Solo se activa cuando existen los secretos YT_*; si no, deja el video como artifact.
+# También se puede lanzar a mano: Actions > Publicar episodio > Run workflow > escribe ep001.
+# Solo sube cuando existen los secretos YT_*; si no, deja el video como artifact.
 name: Publicar episodio
 on:
   push:
     branches: [main]
     paths: ["episodes/**"]
+  workflow_dispatch:
+    inputs:
+      episodios:
+        description: "Episodios a publicar, separados por espacio (ej: ep001 ep002)"
+        required: true
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -12,6 +18,7 @@ jobs:
       YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
       YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
       YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+      EPISODIOS: ${{ github.event.inputs.episodios }}
     steps:
       - uses: actions/checkout@v4
         with: { fetch-depth: 2 }
@@ -21,10 +28,15 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Renderizar y subir
         run: |
-          for f in $(git diff --name-only HEAD~1 HEAD -- episodes/ | grep yaml$); do
+          if [ -n "$EPISODIOS" ]; then
+            lista=$(for e in $EPISODIOS; do echo "episodes/$e.yaml"; done)
+          else
+            lista=$(git diff --name-only HEAD~1 HEAD -- episodes/ | grep yaml$ || true)
+          fi
+          for f in $lista; do
             python -m gen.motion "$f"
             id=$(basename "$f" .yaml)
-            if [ -n "$YT_REFRESH_TOKEN" ]; then python -m gen.upload "$id"; fi
+            if [ -n "$YT_REFRESH_TOKEN" ]; then python -m gen.upload "$id"; else echo "Sin secretos YT_*: no se sube $id"; fi
           done
       - uses: actions/upload-artifact@v4
         with:
@@ -33,5 +45,4 @@ jobs:
             salida/*/*.mp4
             salida/*/*.jpg
             salida/*/*.json
-            salida/muestras/*.mp3
           retention-days: 30
