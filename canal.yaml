@@ -1,0 +1,7 @@
+# Configuración del canal. Cambia aquí el nombre y la voz; se aplica a todos los episodios.
+nombre: "El Atajo IA"
+# Voces gratuitas recomendadas (Microsoft Edge, español neutro latino):
+#   es-MX-JorgeNeural (hombre, cálido)   es-MX-DaliaNeural (mujer, clara)
+#   es-US-AlonsoNeural (hombre, enérgico) es-US-PalomaNeural (mujer, cercana)
+voz: es-MX-JorgeNeural
+velocidad: "+8%"

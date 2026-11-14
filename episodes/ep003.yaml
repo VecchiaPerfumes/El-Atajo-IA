@@ -1,0 +1,111 @@
+id: ep003
+titulo: "Automatiza tus cobros: recordatorios de pago que se envían solos (gratis)"
+miniatura:
+  linea1: "COBRA"
+  linea2: "SIN PERSEGUIR CLIENTES"
+  etiqueta: "GRATIS"
+  chat: ["Recordatorio: tu pago vence mañana", "¡Gracias! Ya transferí"]
+descripcion: |
+  Cómo dejar de perseguir clientes para que te paguen: una hoja de Google Sheets que envía
+  recordatorios de pago automáticos por correo, con textos escritos por IA. Gratis y sin programar.
+
+  00:00 El costo de perseguir pagos
+  00:45 Qué vamos a construir
+  01:30 Paso 1: la hoja de cobros
+  02:40 Paso 2: los 3 mensajes (con IA)
+  04:00 Paso 3: el envío automático
+  05:30 Paso 4: probar antes de activar
+  06:20 Reglas para no molestar a tus clientes
+etiquetas: [cobranza, recordatorios de pago, google sheets, automatizacion, ia para negocios, facturas, emprendedores]
+publicar: "2026-11-28T18:00:00-06:00"
+escenas:
+  - tipo: portada
+    titulo: "Deja de perseguir a tus clientes"
+    subtitulo: "Recordatorios de pago automáticos y gratis"
+    narracion: >
+      Si tienes que escribirle a tus clientes para recordarles que te deben, este video es para ti.
+      Hoy vas a crear un sistema que envía los recordatorios de pago por ti, a tiempo y con buen tono.
+      Gratis, en Google Sheets, y sin saber programar.
+  - tipo: dato
+    cifra: "Tu tiempo"
+    texto: "Cada mensaje de cobro manual es tiempo que no vendes"
+    nota: "Cuenta cuántos escribiste el mes pasado"
+    narracion: >
+      Haz la cuenta. ¿Cuántos mensajes de cobro escribiste el mes pasado? ¿Cuántas veces se te olvidó uno y el pago se atrasó una semana?
+      Cobrar es incómodo, y por eso lo dejamos para después. Pero un recordatorio a tiempo es la forma más simple de cobrar antes.
+      La buena noticia es que es una tarea perfecta para automatizar: siempre es igual, solo cambian el nombre, el monto y la fecha.
+  - tipo: lista
+    titulo: "Lo que vamos a construir"
+    puntos:
+      - "Aviso 3 días antes del vencimiento"
+      - "Aviso el día que vence"
+      - "Aviso amable 3 días después"
+    narracion: >
+      Vamos a construir tres avisos.
+      Uno tres días antes de que venza el pago, para que tu cliente se organice.
+      Otro el mismo día.
+      Y uno amable tres días después, si todavía no aparece el pago.
+      Cuando marcas un cobro como pagado, los avisos se detienen solos.
+  - tipo: paso
+    numero: 1
+    titulo: "Crea la hoja de cobros"
+    puntos:
+      - "Cliente, correo, monto, vencimiento"
+      - "Columna Estado: pendiente o pagado"
+      - "Columna Último aviso"
+    narracion: >
+      Paso uno: la hoja de cobros. Abre Google Sheets y crea estas columnas.
+      Cliente, correo, concepto, monto y fecha de vencimiento.
+      Después una columna llamada estado, donde vas a escribir pendiente o pagado.
+      Y una última columna llamada último aviso, que el sistema va a llenar solo para no repetir mensajes.
+  - tipo: paso
+    numero: 2
+    titulo: "Escribe los 3 mensajes con IA"
+    puntos:
+      - "Dale tu tono y el nombre de tu negocio"
+      - "Pide versiones cortas y amables"
+      - "Incluye cómo pagar en una línea"
+    narracion: >
+      Paso dos: los mensajes. Abre Claude o ChatGPT y pídele tres recordatorios de pago para tu negocio, uno para antes, uno para el día y uno para después del vencimiento.
+      Dale tu tono, el nombre de tu negocio, y pide que sean cortos y amables. El objetivo es cobrar sin perder al cliente.
+      Pide que deje espacios para el nombre, el monto y la fecha, y que incluya en una sola línea cómo pagarte.
+  - tipo: paso
+    numero: 3
+    titulo: "Activa el envío automático"
+    puntos:
+      - "Extensiones, Apps Script"
+      - "Pega el script de la descripción"
+      - "Activador diario a las 9:00"
+    narracion: >
+      Paso tres: el envío automático. En tu hoja ve a extensiones y luego a Apps Script. Es una herramienta gratuita de Google que ya viene incluida.
+      Pega el script que te dejo en la descripción. Lo que hace es revisar la hoja una vez al día, ver qué cobros están pendientes y enviar el mensaje que toca.
+      Después crea un activador para que se ejecute todos los días a las nueve de la mañana. Google te va a pedir permiso para enviar correos desde tu cuenta: es normal.
+  - tipo: paso
+    numero: 4
+    titulo: "Prueba antes de activarlo"
+    puntos:
+      - "Un cobro de prueba con tu propio correo"
+      - "Revisa el texto y los datos"
+      - "Después borra la prueba"
+    narracion: >
+      Paso cuatro, y no te lo saltes: prueba.
+      Agrega un cobro falso con tu propio correo y una fecha de mañana. Ejecuta el script y revisa que el mensaje te llegue con el nombre y el monto correctos.
+      Un error en una automatización no se equivoca una vez. Se equivoca con todos tus clientes a la vez.
+  - tipo: lista
+    titulo: "Reglas para no molestar"
+    puntos:
+      - "Máximo 3 avisos por cobro"
+      - "Nunca en fin de semana"
+      - "Si responde, contesta tú"
+    narracion: >
+      Tres reglas para que tus clientes no se sientan acosados.
+      Máximo tres avisos por cobro. Si después de eso no paga, es una conversación personal, no un correo automático.
+      No envíes en fin de semana.
+      Y si un cliente responde, contesta tú. La automatización abre la conversación, pero la relación es tuya.
+  - tipo: cierre
+    titulo: "Copia el script gratis"
+    subtitulo: "Enlace en la descripción"
+    narracion: >
+      El script y los tres mensajes están en la descripción, listos para copiar.
+      La próxima semana empezamos con n8n, la herramienta gratuita para automatizar casi cualquier cosa en tu negocio.
+      Suscríbete y activa la campana.
